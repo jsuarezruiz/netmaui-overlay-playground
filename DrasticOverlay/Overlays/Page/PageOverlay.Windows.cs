@@ -1,9 +1,4 @@
 ﻿using Microsoft.UI.Xaml;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrasticOverlay.Overlays
 {
@@ -23,19 +18,22 @@ namespace DrasticOverlay.Overlays
             base.Initialize();
 
             var _nativeElement = Window.Content.GetNative(true);
+
             if (_nativeElement == null)
                 return false;
 
             var handler = Window.Handler as Microsoft.Maui.Handlers.WindowHandler;
+
             if (handler?.NativeView is not Microsoft.UI.Xaml.Window _window)
                 return false;
 
             if (handler.MauiContext == null)
                 return false;
 
-            this.mauiContext = handler.MauiContext;
+            mauiContext = handler.MauiContext;
 
-            this.panel = _window.Content as Microsoft.UI.Xaml.Controls.Panel;
+            panel = _window.Content as Microsoft.UI.Xaml.Controls.Panel;
+
             if (panel == null)
                 return false;
 
@@ -56,7 +54,7 @@ namespace DrasticOverlay.Overlays
             if (element != null)
                 panel.Children.Add(element);
             pageSet = true;
-            Microsoft.Maui.Controls.Xaml.Diagnostics.VisualDiagnostics.OnChildAdded(this, this.page, 0);
+            VisualDiagnostics.OnChildAdded(this, this.page, 0);
         }
 
         public void RemovePage()
@@ -66,7 +64,7 @@ namespace DrasticOverlay.Overlays
 
             panel?.Children.Remove(element);
             pageSet = false;
-            Microsoft.Maui.Controls.Xaml.Diagnostics.VisualDiagnostics.OnChildRemoved(this, this.page, 0);
+            VisualDiagnostics.OnChildRemoved(this, this.page, 0);
         }
 
         public override bool Deinitialize()

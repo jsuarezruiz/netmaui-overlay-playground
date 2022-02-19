@@ -11,7 +11,6 @@ namespace DrasticOverlay
 				return nativeHandler.NativeView;
 
 			return (view.Handler?.NativeView as FrameworkElement);
-
 		}
 	}
 }

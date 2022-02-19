@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using CoreGraphics;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Graphics.CoreGraphics;
-using Microsoft.Maui.Graphics.Native;
+﻿using CoreGraphics;
 using UIKit;
 
 namespace DrasticOverlay.Overlays

@@ -1,11 +1,4 @@
-﻿using Android.Views;
-using Java.Interop;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Android.Views.View;
+﻿using static Android.Views.View;
 
 namespace DrasticOverlay.Overlays
 {

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DrasticOverlay.Overlays
+﻿namespace DrasticOverlay.Overlays
 {
-	/// <summary>
-	/// MenuOverlay shows a basic button and menu system.
-	/// By enabling EnableDrawableTouchHandling, you can handle when your overlay elements
-	/// are tapped. As a result, you can make basic buttons or other UI.
-	/// </summary>
-	public class MenuOverlay : WindowOverlay
+    /// <summary>
+    /// MenuOverlay shows a basic button and menu system.
+    /// By enabling EnableDrawableTouchHandling, you can handle when your overlay elements
+    /// are tapped. As a result, you can make basic buttons or other UI.
+    /// </summary>
+    public class MenuOverlay : WindowOverlay
     {
         IWindowOverlayElement _menuWindowDrawable;
 

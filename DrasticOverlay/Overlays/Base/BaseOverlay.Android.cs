@@ -1,11 +1,6 @@
-﻿using System.Linq;
-using Android.App;
+﻿using Android.App;
 using Android.Views;
-using AndroidX.CoordinatorLayout.Widget;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Graphics.Native;
 using Microsoft.Maui.Handlers;
-using Microsoft.Maui.Platform;
 namespace DrasticOverlay.Overlays
 {
     public partial class BaseOverlay

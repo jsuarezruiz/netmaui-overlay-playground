@@ -1,5 +1,4 @@
-﻿using System;
-using CoreGraphics;
+﻿using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
 using UIKit;
@@ -26,8 +25,10 @@ namespace DrasticOverlay.Overlays
 
             // We're going to create a new view.
             // This will handle the "drop" events, and nothing else.
-            dragAndDropView = new DragAndDropView(this, nativeWindow.RootViewController.View.Frame);
-            dragAndDropView.UserInteractionEnabled = true;
+            dragAndDropView = new DragAndDropView(this, nativeWindow.RootViewController.View.Frame)
+            {
+                UserInteractionEnabled = true
+            };
             nativeWindow?.RootViewController.View.AddSubview(dragAndDropView);
             nativeWindow?.RootViewController.View.BringSubviewToFront(dragAndDropView);
             return dragAndDropOverlayNativeElementsInitialized = true;

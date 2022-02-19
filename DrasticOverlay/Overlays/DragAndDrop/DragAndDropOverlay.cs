@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DrasticOverlay.Overlays
+﻿namespace DrasticOverlay.Overlays
 {
     public partial class DragAndDropOverlay : WindowOverlay
     {
