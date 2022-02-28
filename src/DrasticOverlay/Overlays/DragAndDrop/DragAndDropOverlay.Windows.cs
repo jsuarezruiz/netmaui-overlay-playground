@@ -20,7 +20,7 @@ namespace DrasticOverlay.Overlays
                 return false;
 
             var handler = Window.Handler as Microsoft.Maui.Handlers.WindowHandler;
-            if (handler?.NativeView is not Microsoft.UI.Xaml.Window _window)
+            if (handler?.PlatformView is not Microsoft.UI.Xaml.Window _window)
                 return false;
 
             this.panel = _window.Content as Microsoft.UI.Xaml.Controls.Panel;

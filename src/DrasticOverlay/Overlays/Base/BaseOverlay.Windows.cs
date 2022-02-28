@@ -31,7 +31,7 @@ namespace DrasticOverlay.Overlays
 			if (_nativeElement == null)
 				return false;
 			var handler = Window.Handler as WindowHandler;
-			if (handler?.NativeView is not Microsoft.UI.Xaml.Window _window)
+			if (handler?.PlatformView is not Microsoft.UI.Xaml.Window _window)
 				return false;
 
 			_panel = _window.Content as Panel;

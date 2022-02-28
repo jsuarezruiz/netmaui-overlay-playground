@@ -7,10 +7,10 @@ namespace DrasticOverlay
     {
         internal static AView? GetNative(this IElement view, bool returnWrappedIfPresent)
         {
-            if (view.Handler is INativeViewHandler nativeHandler && nativeHandler.NativeView != null)
-                return nativeHandler.NativeView;
+            if (view.Handler is IPlatformViewHandler nativeHandler && nativeHandler.PlatformView != null)
+                return nativeHandler.PlatformView;
 
-            return (view.Handler?.NativeView as AView);
+            return (view.Handler?.PlatformView as AView);
         }
 
         public static NavigationRootManager GetNavigationRootManager(this IMauiContext mauiContext) =>

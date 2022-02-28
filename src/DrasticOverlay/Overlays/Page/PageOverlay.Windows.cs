@@ -24,7 +24,7 @@ namespace DrasticOverlay.Overlays
 
             var handler = Window.Handler as Microsoft.Maui.Handlers.WindowHandler;
 
-            if (handler?.NativeView is not Microsoft.UI.Xaml.Window _window)
+            if (handler?.PlatformView is not Microsoft.UI.Xaml.Window _window)
                 return false;
 
             if (handler.MauiContext == null)
@@ -50,7 +50,7 @@ namespace DrasticOverlay.Overlays
 
             this.page = page;
             var pageHandler = page.ToHandler(this.mauiContext);
-            element = pageHandler.NativeView;
+            element = pageHandler.PlatformView;
             if (element != null)
                 panel.Children.Add(element);
             pageSet = true;

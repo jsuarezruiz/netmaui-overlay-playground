@@ -31,6 +31,8 @@ namespace DrasticOverlay.Overlays
 
         public bool IsNativeViewInitialized { get; private set; }
 
+        public bool IsPlatformViewInitialized { get; set; }
+
         public event EventHandler<WindowOverlayTappedEventArgs> Tapped;
 
         public bool AddWindowElement(IWindowOverlayElement element)
